@@ -59,10 +59,10 @@ server
   .dial('xxxxxxxxx')
   .gather('今日の天気は? 晴れは0、雨は1、それ以外は9を押してください')
   .then(function (result) {
-    if (result.Digits = '0') {
+    if (result.Digits === '0') {
       return server.say('お天気がいいのですね!');
     }
-    if (result.Digits = '1') {
+    if (result.Digits === '1') {
       server
         .gather('傘は持っていますか? 持って入れば0、持っていなければ1を押してください')
         .then(function (result) {
